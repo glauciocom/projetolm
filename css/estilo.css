@@ -1,0 +1,35 @@
+* {
+    background-color: rgba(248, 250, 252, 0.7);
+  }
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0,0,0);
+}
+i  {
+    color: rgb(143, 117, 60);
+    /* box-shadow: black 2px 2px 4px; */
+}
+#topo {
+    margin: 8px;
+    padding: 3px 10px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    border-width: 5px;
+    box-shadow: 2px 5px 5px rgb(51, 51, 50);
+    
+}
+p{
+    font-size:20px;
+}
+.retrato img {
+    max-width:500px;
+    max-height:500px;
+    width: auto;
+    height: auto;       
+}
