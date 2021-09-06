@@ -8,7 +8,7 @@ h1 {
     color: rgb(0,0,0);
 }
 
-#topo, #main, #rodape {
+#topo, #main, #rodape, #topoform, #mainform, #rodapeform {
     background-color:  rgba(201, 207, 199, 0.904);
     margin: 8px;
     padding: 3px 10px;
@@ -63,6 +63,16 @@ ul {
     justify-self: center;
 }
 
+.valor{
+    color: rgb(0,0,255);
+    line-height: 2px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    align-self: center;
+    justify-self: center;
+}
+
 i  {
     color: rgb(143, 117, 60);
 }
@@ -106,8 +116,6 @@ p{
     font-size:20px;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: right;
-    
     text-align: right;    
 }
 
@@ -116,4 +124,68 @@ p{
     color: rgb(0,0,255);
 }
 
+a.botao{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
 
+a.botao:hover{
+    color: white;
+    background: darkblue;
+    text-decoration: none;
+}
+
+#copyright {
+    font-weight: bold;   
+    text-align: center;
+}
+
+.mainform h2 {
+    text-align: center;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 50% 75%;
+    margin: 1px 1px 1px 3px;
+}
+
+.container3 {
+    display: grid;
+    grid-template-columns: 100%;
+    align-self: flex-start;
+    justify-content: flex-start;
+}
+
+.container4 {
+    display: grid;
+    grid-template-columns: 100%;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+main form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "cliente fone email"
+        "dt_nascimento celular motivo"
+        "assunto promocoes prediletos"
+        "teor btn_enviar btn_limpar";
+    grid-gap: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    }
+
+main form .form-group {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.agradecimentos {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20 px;
+    text-align: center;
+}

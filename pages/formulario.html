@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biscoitos</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div id="topoform">
+            <h1><i class="fas fa-shapes"></i><strong> Biscoitos Caseiros </strong><i class="fas fa-heart"></i></h1>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main>
+        <div id = "mainform">                        
+            <h2>Formulário de contato</h2>
+            
+            <!-- Formulário -->
+            <form action="/server/cadastro_contato_cliente.php" method="POST">
+                <div class="form-group cliente">
+                    <label for="cliente">Nome do cliente: </label>
+                    <input type="text" name="nome_cliente" id="cliente" placeholder="Digite nome..." required>
+                </div>
+                <div class="form-group dt_nascimento">
+                    <label for="dt_nascimento">Data de nascimento: </label>
+                    <input type="date" name="dt_nascimento" id="dt_nascimento">
+                </div>
+                <div class="form-group email">
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="email" id="email" placeholder="prefixo@domínio.com.br...">
+                </div>
+                <div class="form-group fone">
+                    <label for="fone">Telefone:</label>
+                    <input type="tel" id="fone" name="fone" pattern="[0-9]{2} [0-9]{4}-[0-9]{4}" placeholder="99 9999-9999">
+                </div>
+                <div class="form-group celular">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="99 99999-9999">
+                </div>
+                <div class="form-group motivo">
+                    <div> Indique o motivo do contato:</div>
+                    <div>
+                        <input type="radio" name="motivo" value="Encomenda" id="Encomenda" checked>
+                        <label for="Encomenda">Encomenda</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="motivo" value="Elogio" id="Elogio">
+                        <label for="Elogio">Elogio</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="motivo" value="Reclamacao" id="Reclamacao">
+                        <label for="Reclamacao">Reclamação</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="motivo" value="Sugestao" id="Sugestao">
+                        <label for="Sugestao">Sugestão</label>
+                    </div>
+                </div>
+                <div class="form-group assunto">
+                    <label for="assunto">Assunto: </label>
+                    <input type="text" name="assunto" id="assunto" placeholder="Digite o assunto...">
+                </div>
+                <div class="form-group teor">
+                    <label for="teor">Descrição: </label>
+                    <br />
+                    <textarea name="teor" id="teor" cols="30" rows="10">
+                    </textarea>
+                </div>
+                <div class="form-group prediletos">
+                    <div>Qual(is) seu(s) biscoito(s) preferido(s)?</div>
+                    <div>
+                        <input type="checkbox" name="prediletos" value="raminho" id="raminho">
+                        <label for="raminho">Raminho</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="prediletos" value="raivinha" id="raivinha">
+                        <label for="raivinha">Raivinha</label>
+                    </div>    
+                    <div>
+                        <input type="checkbox" name="prediletos" value="nata" id="nata">
+                        <label for="nata">Nata</label>
+                    </div>    
+                    <div>
+                        <input type="checkbox" name="prediletos" value="laranja" id="laranja">
+                        <label for="laranja">Laranja</label>
+                    </div>    
+                    <div>
+                        <input type="checkbox" name="prediletos" value="docinho" id="docinho">
+                        <label for="docinho">Docinho</label>
+                    </div>    
+                    <div>
+                        <input type="checkbox" name="prediletos" value="bem_casado" id="bem_casado">
+                        <label for="bem_casado">Bem Casado</label>
+                    </div>    
+                    <div>
+                        <input type="checkbox" name="prediletos" value="amanteigado" id="amanteigado">
+                        <label for="amanteigado">Amanteigado</label>
+                    </div>    
+                    <div>
+                        <input type="checkbox" name="prediletos" value="suspiro" id="suspiro">
+                        <label for="suspiro">Suspiro</label>
+                    </div>
+                </div>
+                <div class="form-group promocoes">
+                    <label for="promocoes">Quer receber e-mail com promoções?</label>
+                    <select id="promocoes" name="promo">
+                        <option value=""></option>
+                        <option value="sim">Sim, desejo receber</option>
+                        <option value="nao">Não, não envie e-mails</option>
+                    </select>
+                </div>
+                <div class="form-group btn_enviar">        
+                    <input type="submit" value="Enviar Formulário!">
+                </div>
+                <div class="form-group btn_limpar">                    
+                    <input type="reset" value="Limpar Formulário!">
+                </div>
+            </form>
+            <div class="agradecimentos">
+                <p><b>Agradecemos antecipadamente sua preferência!</b></p>
+                <p><b>Em breve retornaremos seu contato.</b></p>                
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div id = "rodapeform">
+            <div class="container2">
+                <div class="container3">
+                    <p class="itemrdp1"><a href="../index.html" class="botao"><i class="fas fa-arrow-circle-left"></i> voltar</a></p> 
+                </div>
+                <div class="container4">
+                    <p class="itemrdp2" id="copyright">Biscoitos Caseiros <sup>&copy;</sup> Desde 1983</p>
+                </div>
+                <script src="https://kit.fontawesome.com/19d0e8bc9b.js" crossorigin="anonymous"></script>
+            </div>
+        </div>
+    </footer>
+</body>
