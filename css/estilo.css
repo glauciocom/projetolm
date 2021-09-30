@@ -10,7 +10,7 @@ h1 {
 }
 
 /* Formatação padrão para todas as páginas */
-#topo, #main, #rodape, #topoform, #mainform, #rodapeform, #topohist, #mainhist, #rodapehist {
+#topo, #main, #rodape, #topoform, #mainform, #rodapeform, #topohist, #mainhist, #rodapehist, #toposobre, #mainsobre, #rodapesobre {
     background-color:  rgba(201, 207, 199, 0.904);
     margin: 8px;
     padding: 3px 10px;
@@ -56,7 +56,7 @@ ul {
     font-size:2em;    
 }
 
-.rotulo, .titulo {
+.rotulo, .titulo, .rotulosobre, .rotulosobre1 {
     color: rgb(0,0,255);
     line-height: 4px;
     font-weight: 800;
@@ -80,7 +80,7 @@ i  {
     color: rgb(143, 117, 60);
 }
 
-.container {
+.container1 {
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -193,4 +193,87 @@ main form .form-group {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20 px;
     text-align: center;
+}
+
+
+.mantra h3 {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    margin: 18px;
+    background-color: red;
+    border-radius: 20px;
+    font-size: 15pt;
+    color: white;
+}
+
+.retratosobre img {
+    width: minmax(200px 500px);
+    max-width:500px;
+    max-height:500px;
+    width: auto;
+    height: auto;   
+    border: 1px solid rgba(201, 207, 199, 0.904);
+    border-radius: 50%;  
+}
+
+.rotulosobre{
+  text-align: right;
+}
+
+.rotulosobre1 {
+  /*animation-direction: reverse;*/
+  animation: move_rotulosobre1 8s linear;  
+}
+
+.rotulosobre {
+  /*animation-direction: reverse;*/
+  animation: move_rotulosobre 8s linear;
+  
+}
+
+@keyframes move_rotulosobre1{
+  from, to {
+    transform: translateX(0);
+  }
+
+  12.5%, 87.5%{
+    transform: translate(20vw);
+  }
+
+  25%, 75%{
+    transform: translate(40vw);
+  }
+
+  37.5%, 62.5%{
+    transform: translate(60vw);
+  }
+
+  50%{
+     transform: translate(80vw);
+  }  
+}
+
+
+@keyframes move_rotulosobre{
+  from, to {
+    transform: translateX(-80);
+  }
+
+  12.5%, 87.5%{
+    transform: translate(-20vw);
+  }
+
+  25%, 75%{
+    transform: translate(-40vw);
+  }
+
+  37.5%, 62.5%{
+    transform: translate(-60vw);
+  }
+
+  50%{
+     transform: translate(-80vw);
+  } 
+  
 }
